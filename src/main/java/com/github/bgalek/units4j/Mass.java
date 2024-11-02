@@ -1,6 +1,9 @@
 package com.github.bgalek.units4j;
 
 public final class Mass extends BaseUnit<Mass, Double> {
+
+    public static final double POUND = 453.59237;
+
     private Mass(double grams) {
         super(grams);
     }
@@ -14,7 +17,7 @@ public final class Mass extends BaseUnit<Mass, Double> {
     }
 
     public static Mass ofPounds(double value) {
-        return new Mass(value * 453.59237);
+        return new Mass(value * POUND);
     }
 
     public static Mass ofOunces(double value) {
@@ -30,7 +33,7 @@ public final class Mass extends BaseUnit<Mass, Double> {
     }
 
     public double toPounds() {
-        return this.value / 453.59237;
+        return this.value / POUND;
     }
 
     public double toOunces() {

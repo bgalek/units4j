@@ -1,6 +1,9 @@
 package com.github.bgalek.units4j;
 
 public final class Pressure extends BaseUnit<Pressure, Double> {
+
+    public static final double PSI = 6894.76;
+
     private Pressure(double pascals) {
         super(pascals);
     }
@@ -18,7 +21,7 @@ public final class Pressure extends BaseUnit<Pressure, Double> {
     }
 
     public static Pressure ofPsi(double value) {
-        return new Pressure(value * 6894.76);
+        return new Pressure(value * PSI);
     }
 
     public double toPascals() {
@@ -34,7 +37,7 @@ public final class Pressure extends BaseUnit<Pressure, Double> {
     }
 
     public double toPsi() {
-        return this.value / 6894.76;
+        return this.value / PSI;
     }
 
     public Pressure add(Pressure other) {
