@@ -2,6 +2,8 @@ package com.github.bgalek.units4j;
 
 public final class Length extends BaseUnit<Length, Double> {
 
+    public static final double FEET = 0.3048;
+
     private Length(double meters) {
         super(meters);
     }
@@ -23,7 +25,7 @@ public final class Length extends BaseUnit<Length, Double> {
     }
 
     public static Length ofFeet(double value) {
-        return new Length(value * 0.3048);
+        return new Length(value * FEET);
     }
 
     public double toMeters() {
@@ -43,7 +45,7 @@ public final class Length extends BaseUnit<Length, Double> {
     }
 
     public double toFeet() {
-        return this.value / 0.3048;
+        return this.value / FEET;
     }
 
     public Length add(Length other) {

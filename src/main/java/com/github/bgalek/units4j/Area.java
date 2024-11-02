@@ -3,6 +3,7 @@ package com.github.bgalek.units4j;
 public final class Area extends BaseUnit<Area, Double> {
 
     public static final double ACRE = 4046.86;
+    public static final double SQUARE_FEET = 0.092903;
 
     private Area(double squareMeters) {
         super(squareMeters);
@@ -17,7 +18,7 @@ public final class Area extends BaseUnit<Area, Double> {
     }
 
     public static Area ofSquareFeet(double value) {
-        return new Area(value * 0.092903);
+        return new Area(value * SQUARE_FEET);
     }
 
     public static Area ofAcres(double value) {
@@ -33,7 +34,7 @@ public final class Area extends BaseUnit<Area, Double> {
     }
 
     public double toSquareFeet() {
-        return this.value / 0.092903;
+        return this.value / SQUARE_FEET;
     }
 
     public double toAcres() {

@@ -1,6 +1,9 @@
 package com.github.bgalek.units4j;
 
 public final class Force extends BaseUnit<Force, Double> {
+
+    public static final double POUND_FORCE = 4.44822;
+
     private Force(double newtons) {
         super(newtons);
     }
@@ -14,7 +17,7 @@ public final class Force extends BaseUnit<Force, Double> {
     }
 
     public static Force ofPoundForce(double value) {
-        return new Force(value * 4.44822);
+        return new Force(value * POUND_FORCE);
     }
 
     public double toNewtons() {
@@ -26,7 +29,7 @@ public final class Force extends BaseUnit<Force, Double> {
     }
 
     public double toPoundForce() {
-        return this.value / 4.44822;
+        return this.value / POUND_FORCE;
     }
 
     public Force add(Force other) {
