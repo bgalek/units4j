@@ -38,18 +38,22 @@ public final class Energy extends BaseUnit<Energy, Double> {
         return this.value / 3600;
     }
 
+    @Override
     public Energy add(Energy other) {
         return new Energy(this.value + other.value);
     }
 
+    @Override
     public Energy subtract(Energy other) {
         return new Energy(this.value - other.value);
     }
 
+    @Override
     public Energy multiply(double factor) {
         return new Energy(this.value * factor);
     }
 
+    @Override
     public Energy divide(double divisor) {
         if (divisor == 0) throw new ArithmeticException("Cannot divide by zero");
         return new Energy(this.value / divisor);

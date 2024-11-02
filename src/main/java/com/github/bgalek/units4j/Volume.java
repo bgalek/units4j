@@ -38,19 +38,22 @@ public final class Volume extends BaseUnit<Volume, Double> {
         return this.value * 1000;
     }
 
-    // Arithmetic operations
+    @Override
     public Volume add(Volume other) {
         return new Volume(this.value + other.value);
     }
 
+    @Override
     public Volume subtract(Volume other) {
         return new Volume(this.value - other.value);
     }
 
+    @Override
     public Volume multiply(double factor) {
         return new Volume(this.value * factor);
     }
 
+    @Override
     public Volume divide(double divisor) {
         if (divisor == 0) throw new ArithmeticException("Cannot divide by zero");
         return new Volume(this.value / divisor);

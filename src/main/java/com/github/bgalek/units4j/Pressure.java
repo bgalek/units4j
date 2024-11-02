@@ -40,10 +40,12 @@ public final class Pressure extends BaseUnit<Pressure, Double> {
         return this.value / PSI;
     }
 
+    @Override
     public Pressure add(Pressure other) {
         return new Pressure(this.value + other.value);
     }
 
+    @Override
     public Pressure subtract(Pressure other) {
         return new Pressure(this.value - other.value);
     }

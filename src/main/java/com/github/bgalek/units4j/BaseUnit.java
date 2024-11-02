@@ -18,6 +18,7 @@ public abstract class BaseUnit<UNIT, INTERNAL> implements Comparable<BaseUnit<UN
     public abstract UNIT divide(double divisor);
 
     @Override
+    @SuppressWarnings("unchecked")
     public int compareTo(BaseUnit<UNIT, INTERNAL> value) {
         if (this.value instanceof Comparable) {
             return ((Comparable<INTERNAL>) this.value).compareTo(value.value);

@@ -46,18 +46,22 @@ public final class Storage extends BaseUnit<Storage, Long> {
         return this.value / (1024.0 * 1024 * 1024 * 1024);
     }
 
+    @Override
     public Storage add(Storage other) {
         return new Storage(this.value + other.value);
     }
 
+    @Override
     public Storage subtract(Storage other) {
         return new Storage(this.value - other.value);
     }
 
+    @Override
     public Storage multiply(double factor) {
         return new Storage((long) (this.value * factor));
     }
 
+    @Override
     public Storage divide(double divisor) {
         if (divisor == 0) throw new ArithmeticException("Cannot divide by zero");
         return new Storage((long) (this.value / divisor));

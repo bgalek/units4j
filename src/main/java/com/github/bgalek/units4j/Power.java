@@ -30,18 +30,22 @@ public final class Power extends BaseUnit<Power, Double> {
         return this.value / 745.7;
     }
 
+    @Override
     public Power add(Power other) {
         return new Power(this.value + other.value);
     }
 
+    @Override
     public Power subtract(Power other) {
         return new Power(this.value - other.value);
     }
 
+    @Override
     public Power multiply(double factor) {
         return new Power(this.value * factor);
     }
 
+    @Override
     public Power divide(double divisor) {
         if (divisor == 0) throw new ArithmeticException("Cannot divide by zero");
         return new Power(this.value / divisor);

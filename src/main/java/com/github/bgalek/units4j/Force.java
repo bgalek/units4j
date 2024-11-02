@@ -32,18 +32,22 @@ public final class Force extends BaseUnit<Force, Double> {
         return this.value / POUND_FORCE;
     }
 
+    @Override
     public Force add(Force other) {
         return new Force(this.value + other.value);
     }
 
+    @Override
     public Force subtract(Force other) {
         return new Force(this.value - other.value);
     }
 
+    @Override
     public Force multiply(double factor) {
         return new Force(this.value * factor);
     }
 
+    @Override
     public Force divide(double divisor) {
         if (divisor == 0) throw new ArithmeticException("Cannot divide by zero");
         return new Force(this.value / divisor);

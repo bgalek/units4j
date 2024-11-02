@@ -41,18 +41,22 @@ public final class Area extends BaseUnit<Area, Double> {
         return this.value / ACRE;
     }
 
+    @Override
     public Area add(Area other) {
         return new Area(this.value + other.value);
     }
 
+    @Override
     public Area subtract(Area other) {
         return new Area(this.value - other.value);
     }
 
+    @Override
     public Area multiply(double factor) {
         return new Area(this.value * factor);
     }
 
+    @Override
     public Area divide(double divisor) {
         if (divisor == 0) throw new ArithmeticException("Cannot divide by zero");
         return new Area(this.value / divisor);

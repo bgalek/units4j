@@ -30,10 +30,12 @@ public final class Temperature extends BaseUnit<Temperature, Double> {
         return this.value;
     }
 
+    @Override
     public Temperature add(Temperature other) {
         return new Temperature(this.value + other.value);
     }
 
+    @Override
     public Temperature subtract(Temperature other) {
         return new Temperature(this.value - other.value);
     }

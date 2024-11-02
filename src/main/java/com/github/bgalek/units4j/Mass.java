@@ -40,10 +40,12 @@ public final class Mass extends BaseUnit<Mass, Double> {
         return this.value / 28.34952;
     }
 
+    @Override
     public Mass add(Mass other) {
         return new Mass(this.value + other.value);
     }
 
+    @Override
     public Mass subtract(Mass other) {
         return new Mass(this.value - other.value);
     }

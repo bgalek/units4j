@@ -48,18 +48,22 @@ public final class Length extends BaseUnit<Length, Double> {
         return this.value / FEET;
     }
 
+    @Override
     public Length add(Length other) {
         return new Length(this.value + other.value);
     }
 
+    @Override
     public Length subtract(Length other) {
         return new Length(this.value - other.value);
     }
 
+    @Override
     public Length multiply(double factor) {
         return new Length(this.value * factor);
     }
 
+    @Override
     public Length divide(double divisor) {
         if (divisor == 0) throw new ArithmeticException("Cannot divide by zero");
         return new Length(this.value / divisor);

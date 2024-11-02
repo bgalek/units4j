@@ -38,18 +38,22 @@ public final class Speed extends BaseUnit<Speed, Double> {
         return this.value / 0.514444;
     }
 
+    @Override
     public Speed add(Speed other) {
         return new Speed(this.value + other.value);
     }
 
+    @Override
     public Speed subtract(Speed other) {
         return new Speed(this.value - other.value);
     }
 
+    @Override
     public Speed multiply(double factor) {
         return new Speed(this.value * factor);
     }
 
+    @Override
     public Speed divide(double divisor) {
         if (divisor == 0) throw new ArithmeticException("Cannot divide by zero");
         return new Speed(this.value / divisor);
