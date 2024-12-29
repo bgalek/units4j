@@ -13,6 +13,7 @@ group = "com.github.bgalek"
 version = scmVersion.version
 
 java {
+    withJavadocJar()
     withSourcesJar()
     toolchain {
         languageVersion.set(JavaLanguageVersion.of(21))
