@@ -1,3 +1,6 @@
+[![Build](https://github.com/bgalek/units4j/actions/workflows/build.yaml/badge.svg)](https://github.com/bgalek/units4j/actions/workflows/build.yaml)
+![Maven Central Version](https://img.shields.io/maven-central/v/com.github.bgalek/units4j)
+
 # Units4J
 
 Units4J is a Java library for handling physical quantities and units of measure.
