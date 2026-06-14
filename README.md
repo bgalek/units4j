@@ -30,7 +30,7 @@ Sadly, Java does not support standard units out of the box, unlike i.e. F#.
 - **Extensible**: Easily add custom units and quantities.
 
 > [!NOTE]  
-> Curretnly this library uses doubles to store values.
+> Currently this library uses doubles to store values.
 > This may lead to precision loss in some cases.
 > If this library turns out to be useful I'll be happy
 > to add support for arbitrary precision numbers.
@@ -59,7 +59,7 @@ public class Example {
     public static void main(String[] args) {
         Length length = Length.ofMeters(10);
         length.add(Length.ofCentimeters(50));
-        System.out.println("Length in centimeters " + lengthInMeters.toCentimeters());
+        System.out.println("Length in centimeters " + length.toCentimeters());
     }
 }
 ```
